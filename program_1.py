@@ -9,6 +9,10 @@ def initials_generator(personsName):
 
     personsInitials = ""
     #    Add your logic here
+    name = input('What is your first name? ',)
+    middle_name = input('What is your middle name? ',)
+    last_name = input('What is your last name? ',)
+    print(f'{name[0]}. {middle_name[0]}. {last_name[0]}.')
 
     return personsInitials.strip()
 

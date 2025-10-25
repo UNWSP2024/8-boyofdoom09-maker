@@ -11,8 +11,27 @@ def word_separator(sentence):
 
     new_sentence = ""
     #    Add your logic here
+    
+    new_sentence = ""
+    first_letter_done = False
+    for character in sentence:
+        if character.isupper():
+            if first_letter_done == False:
+                new_sentence += character
+                first_letter_done = True
+            else:
+                new_sentence += " "
+                new_sentence += character.lower()
+        else:
+            new_sentence += character
+    return new_sentence
 
-    return new_sentence.strip()
+input_string = input('Enter a sentance with no spaces and the first letter of every word is capitalized ')
+output_string = word_separator(input_string)
+print(output_string)
+
+
+   
 
 # Example usage
 
